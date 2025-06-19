@@ -8,6 +8,17 @@ interface ServicePageProps {
   }
 }
 
+export async function generateStaticParams() {
+  return [
+    { slug: 'cardiology' },
+    { slug: 'neurology' },
+    { slug: 'orthopedics' },
+    { slug: 'pediatrics' },
+    { slug: 'dermatology' },
+    { slug: 'radiology' }
+  ]
+}
+
 export default function ServicePage({ params }: ServicePageProps) {
   return (
     <div className="min-h-screen">
